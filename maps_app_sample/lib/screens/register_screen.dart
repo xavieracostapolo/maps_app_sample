@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:maps_app_sample/blocs/blocs.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -14,7 +16,9 @@ class RegisterScreen extends StatelessWidget {
         TextFormField(),
         ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/map');
+              final userBloc = BlocProvider.of<UserBloc>(context);
+              userBloc.createUser('name', 'lastName', 15);
+              //Navigator.pushNamed(context, '/map');
             },
             child: const Text('map'))
       ]),
