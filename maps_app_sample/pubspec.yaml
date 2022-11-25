@@ -38,17 +38,20 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.1.1
   geolocator: ^9.0.2
+  get_it: ^7.2.0
   google_maps_flutter: ^2.2.1
+  injectable: ^2.0.1
   json_annotation: ^4.7.0
   permission_handler: ^10.2.0
   uuid: ^3.0.7
 
 dev_dependencies:
-  json_serializable: ^6.5.4
   build_runner: ^2.3.2
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
+  injectable_generator: ^2.0.1
+  json_serializable: ^6.5.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

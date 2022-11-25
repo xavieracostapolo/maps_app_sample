@@ -2,12 +2,16 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:maps_app_sample/blocs/blocs.dart';
+import 'package:maps_app_sample/injectable.dart';
 import 'package:maps_app_sample/screens/screens.dart';
 
 import 'config/firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Dependency injection (injectable)
+  configureDependencies();
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -17,7 +21,7 @@ Future<void> main() async {
     providers: [
       BlocProvider(create: ((context) => GpsBloc())),
       BlocProvider(
-        create: (context) => UserBloc(),
+        create: (context) => getIt.get<UserBloc>(),
       )
     ],
     child: const MapsApp(),

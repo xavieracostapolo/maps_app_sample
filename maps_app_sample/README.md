@@ -14,3 +14,9 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+https://blog.logrocket.com/implementing-repository-pattern-flutter/
+https://www.sandromaglione.com/techblog/how_to_implement_dependecy_injection_in_flutter
+https://alfredobs97.medium.com/di-con-injector-en-flutter-18de37feda76
+https://pub.dev/packages/injectable
