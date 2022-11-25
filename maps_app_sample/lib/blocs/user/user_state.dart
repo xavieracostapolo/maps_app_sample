@@ -1,18 +1,13 @@
 part of 'user_bloc.dart';
 
 class UserState extends Equatable {
-  final String name, lastName, idUser;
-  final int edad;
+  final UserModel user;
 
-  const UserState(
-      {required this.name,
-      required this.lastName,
-      required this.idUser,
-      required this.edad});
+  const UserState({required this.user});
 
   @override
   List<Object> get props => [];
 
   @override
-  String toString() => '{name : $name, lastName : $lastName}';
+  String toString() => '${user.toJson()}';
 }

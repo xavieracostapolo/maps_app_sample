@@ -20,7 +20,19 @@ class RegisterScreen extends StatelessWidget {
               userBloc.createUser('name', 'lastName', 15);
               //Navigator.pushNamed(context, '/map');
             },
-            child: const Text('map'))
+            child: const Text('map')),
+        ElevatedButton(
+            onPressed: () {
+              final userBloc = BlocProvider.of<UserBloc>(context);
+              userBloc.createUserId('name', 'lastName', 25);
+            },
+            child: const Text('Create Data 2')),
+        ElevatedButton(
+            onPressed: () {
+              final userBloc = BlocProvider.of<UserBloc>(context);
+              userBloc.update('name');
+            },
+            child: const Text('Update Data'))
       ]),
     );
   }
