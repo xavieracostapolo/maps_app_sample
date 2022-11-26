@@ -19,6 +19,8 @@ class LoginView extends StatelessWidget {
         final formStatus = state.formStatus;
         if (formStatus is SubmissionFailed) {
           _showSnackBar(context, formStatus.exception.toString());
+        } else if(formStatus is SubmissionSuccess) {
+          Navigator.pushNamed(context, '/map');
         }
       },
       child: Form(

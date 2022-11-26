@@ -26,7 +26,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
     try {
       await Future.delayed(const Duration(seconds: 5));
-      throw Exception('Error de prueba');
+      //throw Exception('Error de prueba');
       emit(state.copyWith(formStatus: SubmissionSuccess()));
     } on Exception catch (_) {
       emit(state.copyWith(formStatus: SubmissionFailed(_)));

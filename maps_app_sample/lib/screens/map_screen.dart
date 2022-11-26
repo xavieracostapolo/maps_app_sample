@@ -11,7 +11,7 @@ class MapScreen extends StatefulWidget {
 }
 
 class _MapScreenState extends State<MapScreen> {
-  Completer<GoogleMapController> _mapController = Completer();
+  final Completer<GoogleMapController> _mapController = Completer();
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +31,8 @@ class _MapScreenState extends State<MapScreen> {
 
   @override
   Future<void> dispose() async {
+    super.dispose();
     final GoogleMapController controller = await _mapController.future;
     controller.dispose();
-    super.dispose();
   }
 }
