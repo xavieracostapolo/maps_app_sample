@@ -16,6 +16,11 @@ class RegisterScreen extends StatelessWidget {
         TextFormField(),
         ElevatedButton(
             onPressed: () {
+              Navigator.pushNamed(context, '/login');
+            },
+            child: Text('Ir al login')),
+        ElevatedButton(
+            onPressed: () {
               final userBloc = BlocProvider.of<UserBloc>(context);
               userBloc.createUser('name', 'lastName', 15);
               //Navigator.pushNamed(context, '/map');
